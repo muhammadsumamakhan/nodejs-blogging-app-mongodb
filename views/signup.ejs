@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head") %>
+        <title>Sign Up</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <%- include("./partials/nav") %>
+
+
+
+        <!-- Main Content -->
+        <main class="flex-grow-1">
+            <div class="container py-5">
+                <div class="container py-3">
+                    <div class="col-md-6 col-lg-5 mx-auto">
+                        <form action="/user/signup" method="POST" class="border rounded-3 p-4 shadow-sm">
+
+                            <div class="mb-2">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" name="fullName">
+                            </div>
+
+                            <div class="mb-2">
+                                <label for="exampleInputEmail1" class="form-label">
+                                    Email address
+                                </label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" name="email">
+                            </div>
+
+                            <div class="mb-2">
+                                <label for="exampleInputPassword1" class="form-label">
+                                    Password
+                                </label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Sign Up
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+
+
+
+        <!-- Footer -->
+        <%- include("./partials/footer") %>
+            <!-- Bootstrap JS -->
+            <%- include("./partials/script") %>
+
+</body>
+
+</html>

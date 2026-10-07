@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head") %>
+        <title>Add New Blog</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <%- include("./partials/nav") %>
+
+        <!-- Main Content -->
+        <main class="flex-grow-1">
+            <div class="container py-5">
+                <div class="col-md-8 col-lg-7 mx-auto">
+
+                    <form class="border rounded-3 p-4 shadow-sm" action="/blog" method="POST" enctype="multipart/form-data">
+
+                        <div class="mb-3">
+                            <label for="title" class="form-label">
+                                Blog Title
+                            </label>
+
+                            <input type="text" class="form-control" id="title" name="title"
+                                placeholder="Enter your blog title" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="body" class="form-label">
+                                Blog Content
+                            </label>
+
+                            <textarea class="form-control" id="body" name="body" rows="6"
+                                placeholder="Write your blog here..." required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="profileImageUrl" class="form-label">
+                                Cover Image URL
+                            </label>
+
+                            <input type="file" class="form-control" id="coverImageUrl" name="coverImageUrl"
+                                placeholder="Enter image URL">
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                Publish Blog
+                            </button>
+
+                            <button type="reset" class="btn btn-outline-secondary">
+                                Clear
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </main>
+
+
+
+        <!-- Footer -->
+        <%- include("./partials/footer") %>
+        <!-- Bootstrap JS -->
+        <%- include("./partials/script") %>
+
+</body>
+</html>
